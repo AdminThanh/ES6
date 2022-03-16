@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "iphone 12 mini",
+      "price": "900",
+      "description": "iPhone 12 mini smartphone was launched on 13th October 2020."
+    },
+    {
+      "id": 2,
+      "productName": "Galaxy Note 20 Ultra",
+      "price": "1200",
+      "description": "Galaxy Note 20 Ultra smartphone was launched on 13th October 2020."
+    },
+    {
+      "id": 3,
+      "productName": "Huawei Mate 30 Pro",
+      "price": "1400",
+      "description": "Huawei Mate 30 Pro smartphone was launched on 13th October 2020."
+    },
+    {
+      "id": 4,
+      "productName": "Nokia 1080 Vn",
+      "price": "400",
+      "description": "Nokia 1080 Vn smartphone was launched on 13th October 2020."
+    }
+  ]
+}

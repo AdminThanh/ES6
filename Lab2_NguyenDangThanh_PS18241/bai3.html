@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-2">
+        <ul class="nav nav-pills nav-fill mb-4 shadow">
+            <li class="nav-item">
+                <a class="nav-link  border-primary" href="./bai1.html">Bài 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./bai2.html">Bài 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./bai3.html">Bài 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./bai4.html">Bài 4</a>
+            </li>
+        </ul>
+        <div class="show text-center mt-5">
+
+        </div>
+    </div>
+    <main class="container">
+        <h1 id="arr"></h1>
+    </main>
+
+    <script>
+        const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+        let arr2 = [...arr1];
+        console.log(arr2); // Kết quả mong muốn: ['JAN', 'FEB', 'MAR', 'APR', 'MAY']
+
+        document.getElementById('arr').innerHTML = 'Arr2: ' + arr2;
+
+    </script>
+</body>
+
+</html>

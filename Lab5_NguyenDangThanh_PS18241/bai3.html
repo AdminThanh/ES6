@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-2">
+        <ul class="nav nav-pills nav-fill mb-4 shadow">
+            <li class="nav-item">
+                <a class="nav-link  border-primary" href="./bai1.html">Bài 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./bai2.html">Bài 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./bai3.html">Bài 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./bai4.html">Bài 4</a>
+            </li>
+        </ul>
+        <div class="show text-center mt-5">
+
+        </div>
+    </div>
+    <main class="container">
+        <h1 class="text-center" id="timer"></h1>
+    </main>
+
+    <script>
+        // function Clock({ template }) {
+        //     let timer;
+        //     function render() {
+        //         let date = new Date();
+        //         let hours = date.getHours();
+        //         if (hours < 10) hours = '0' + hours;
+        //         let mins = date.getMinutes();
+        //         if (mins < 10) mins = '0' + mins;
+        //         let secs = date.getSeconds();
+        //         if (secs < 10) secs = '0' + secs;
+        //         let output = template
+        //             .replace('h', hours)
+        //             .replace('m', mins)
+        //             .replace('s', secs);
+        //         console.log(output);
+        //     }
+
+        //     this.stop = function () {
+        //         clearInterval(timer);
+        //     };
+
+        //     this.start = function () {
+        //         render();
+        //         timer = setInterval(render, 1000);
+        //     };
+
+        // }
+
+        // let clock = new Clock({ template: 'h:m:s' });
+        // clock.start();
+
+
+        class Clock {
+            constructor() {
+                var timer;
+            };
+            
+            render() {
+                let date = new Date();
+                var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+                let output = time;
+                document.getElementById('timer').innerHTML=output;
+                console.log(output);
+            }
+            stop = function () {
+                clearInterval(timer);
+            };
+            start = function () {
+                this.render();
+                this.timer = setInterval(this.render, 1000);
+            };
+        }
+
+        let clock = new Clock();
+        clock.start();
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container mt-2">
+        <ul class="nav nav-pills nav-fill mb-4 shadow">
+            <li class="nav-item">
+                <a class="nav-link  border-primary" href="./bai1.html">Bài 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./bai2.html">Bài 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./bai3.html">Bài 3</a>
+            </li>
+        </ul>
+        <div class="show text-center mt-5">
+
+        </div>
+    </div>
+    <main id="container">
+
+    </main>
+
+    <script>
+        var Entify = function (name, delay) {
+            this.name = name;
+            this.delay = delay;
+            this.greet = () => {
+                setTimeout(() => {
+                    let container = document.getElementById('container');
+                    let h1 = document.createElement("h1");
+                    h1.innerHTML = 'Xin chào, tên tôi là: ' + this.name;
+                    container.appendChild(h1);
+                }, this.delay);
+            };
+        };
+
+        var thanh = new Entify("Thành", 400);
+        thanh.greet();
+
+        var nam = new Entify('Nam', 3000);
+        nam.greet();
+
+    </script>
+</body>
+
+</html>
